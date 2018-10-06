@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: loader
+server:
+  port: 8084
+
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://${DISCOVERY_URL:localhost}:8082/eureka/
+
+hh:
+  baseUrl: https://api.hh.ru/
