@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: analytic
+server:
+  port: 80
+
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://${DISCOVERY_URL:localhost}:8082/eureka/
+
+hh:
+  baseUrl: https://api.hh.ru/
